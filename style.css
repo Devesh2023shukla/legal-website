@@ -88,7 +88,7 @@ section {
 
 /* Styles for animation elements */
 .balloons {
-    background-image: url('/images/baloon.jpg');
+    background-image: url('baloon.jpg');
     background-size: contain;
     width: 100%;
     height: 100%;
@@ -108,7 +108,7 @@ section {
 /* Create a pseudo-element for the confetti animation */
 .animation-container::after {
     content: '';
-    background-image: url('/images/confetti.png');
+    background-image: url('confetti.png');
     background-size: contain;
     width: 100%;
     height: 100%;
@@ -126,7 +126,7 @@ section {
 }
 
 .second-image {
-    background-image: url('/images/bday.png'); /* Replace 'bday.png' with your actual image path */
+    background-image: url('bday.png'); /* Replace 'bday.png' with your actual image path */
     background-size: contain;
     width: 200px; /* Set the width of the image */
     height: 200px; /* Set the height of the image */
@@ -140,7 +140,7 @@ section {
 
 
 .static-confetti {
-    background-image: url('/images/confetti.png');
+    background-image: url('confetti.png');
     background-size: contain;
     width: 100%;
     height: 50%;
@@ -152,7 +152,7 @@ section {
 
 /* Styles for the additional confetti image at the bottom */
 .additional-confetti {
-    background-image: url('/images/confetti2.png'); /* Replace 'confetti.png' with your actual image path */
+    background-image: url('confetti2.png'); /* Replace 'confetti.png' with your actual image path */
     background-size: contain;
     width: 100%;
     height: 20%;
