@@ -1,0 +1,525 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Section Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Adjust the padding as needed */
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+/* Add a vertical gap between header and content */
+main {
+    margin-top: 30px; /* Adjust the value for better spacing on smaller screens */
+}
+
+/* Additional Styles for Content Sections (Adjust as needed) */
+section {
+    padding: 50px 0;
+}
+
+/* Keyframes for balloon animation */
+@keyframes balloon-float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Keyframes for confetti animation */
+@keyframes confetti-fall {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+
+/* Styles for animation elements */
+.balloons {
+    background-image: url('/images/baloon.jpg');
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: balloon-float 5s ease-in-out infinite;
+}
+
+/* Apply this class to the container holding the lawyer image */
+.animation-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Create a pseudo-element for the confetti animation */
+.animation-container::after {
+    content: '';
+    background-image: url('/images/confetti.png');
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%; /* Start above the container */
+    left: 0;
+    animation: confetti-fall 5s linear infinite;
+    z-index: 1;
+}
+
+/* Styles for the animated image */
+.animated-image {
+    position: relative;
+    z-index: 2;
+}
+
+.second-image {
+    background-image: url('/images/bday.png'); /* Replace 'bday.png' with your actual image path */
+    background-size: contain;
+    width: 200px; /* Set the width of the image */
+    height: 200px; /* Set the height of the image */
+    position: fixed;
+    top: 40%; /* Moved higher up */
+    left: calc(50% - 100px); /* Shifted 20px to the right */
+    transform: translate(-50%, -50%);
+    animation: balloon-float 5s ease-in-out infinite;
+    z-index: 2;
+}
+
+
+.static-confetti {
+    background-image: url('/images/confetti.png');
+    background-size: contain;
+    width: 100%;
+    height: 50%;
+    position: fixed;
+    top: 40px; /* Adjust the top position as needed */
+    left: 0;
+    z-index: 1;
+}
+
+/* Styles for the additional confetti image at the bottom */
+.additional-confetti {
+    background-image: url('/images/confetti2.png'); /* Replace 'confetti.png' with your actual image path */
+    background-size: contain;
+    width: 100%;
+    height: 20%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transform: rotate(-180deg);
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    header {
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    main {
+        margin-top: 120px; /* Adjust the value for better spacing on smaller screens */
+    }
+
+    /* Add more responsive adjustments as needed */
+}
+
+/* Banner Styles */
+#banner {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#banner h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* About Section Styles */
+#about {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+#about h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#about p {
+    text-align: justify;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background-color: #2980b9;
+}
+
+/* Services Section Styles */
+#services {
+    padding: 50px 0;
+}
+
+#services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#services ul {
+    list-style: none;
+}
+
+#services li {
+    margin-bottom: 10px;
+}
+
+/* Cases Section Styles */
+#cases {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+#cases h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#cases ul {
+    list-style: none;
+}
+
+#cases li {
+    margin-bottom: 10px;
+}
+
+/* Contact Section Styles */
+#contact {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#contact h2 {
+    margin-bottom: 30px;
+}
+
+#contact p {
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Profile Section Styles */
+#profile {
+    padding: 50px 0;
+}
+
+#profile h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.profile-info {
+    max-width: 60%;
+}
+
+.profile-info p {
+    margin-bottom: 10px;
+}
+
+/* Profile Bio Styles */
+.profile-bio h3 {
+    margin-bottom: 20px;
+}
+
+/* Responsive Design for Profile Section */
+@media (max-width: 768px) {
+    .profile-details {
+        flex-direction: column;
+    }
+
+    .profile-info {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Cases Section Styles */
+#cases {
+    padding: 50px 0;
+}
+
+#cases h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cases-list {
+    list-style: none;
+}
+
+.cases-list li {
+    margin-bottom: 30px;
+}
+
+.cases-list h3 {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design for Cases Section */
+@media (max-width: 768px) {
+    .cases-list li {
+        text-align: center;
+    }
+}
+
+/* Judgments Section Styles */
+#judgments {
+    padding: 50px 0;
+}
+
+#judgments h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.judgments-list {
+    list-style: none;
+}
+
+.judgments-list li {
+    margin-bottom: 30px;
+}
+
+.judgments-list h3 {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design for Judgments Section */
+@media (max-width: 768px) {
+    .judgments-list li {
+        text-align: center;
+    }
+}
+
+/* Contact Section Styles */
+#contact {
+    padding: 50px 0;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+    .contact-info,
+    .contact-form {
+        max-width: 100%;
+    }
+}
+
+/* Blog Section Styles */
+#blog {
+    padding: 50px 0;
+}
+
+#blog h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.blog-post {
+    margin-bottom: 30px;
+}
+
+.blog-post h3 {
+    margin-bottom: 10px;
+}
+
+.post-date {
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.read-more:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design for Blog Section */
+@media (max-width: 768px) {
+    .blog-post {
+        text-align: center;
+    }
+}
+
+
